@@ -234,6 +234,7 @@ console.log(ul_1);
 console.dir(ul_1);
 
 
+
 function addList(){
   ///listText를 list에 붙이기
   element.appendChild();
@@ -251,13 +252,50 @@ function addList(){
   }
   
 //왼쪽부분 리스트
-const liType1 = document.querySelector("ul li");
+const liType1 = document.querySelector("ul > li");
 liType1.style.backgroundColor = 'lightsalmon';
 liType1.style.width = 100;
 liType1.style.height = 50;
 liType1.style.borderBlockColor = 'black';
 liType1.style.borderBlockStyle = 'solid';
 liType1.style.borderBlockWidth = 1;
+
+/*
+const liType1 = document.querySelector("ul > li[1]");
+liType1.style.backgroundColor = 'lightsalmon';
+liType1.style.width = 100;
+liType1.style.height = 50;
+liType1.style.borderBlockColor = 'black';
+liType1.style.borderBlockStyle = 'solid';
+liType1.style.borderBlockWidth = 1;
+
+
+const liType1 = document.querySelector("ul li[2]");
+liType1.style.backgroundColor = 'lightsalmon';
+liType1.style.width = 100;
+liType1.style.height = 50;
+liType1.style.borderBlockColor = 'black';
+liType1.style.borderBlockStyle = 'solid';
+liType1.style.borderBlockWidth = 1;
+
+
+const liType1 = document.querySelector("ul li[3]");
+liType1.style.backgroundColor = 'lightsalmon';
+liType1.style.width = 100;
+liType1.style.height = 50;
+liType1.style.borderBlockColor = 'black';
+liType1.style.borderBlockStyle = 'solid';
+liType1.style.borderBlockWidth = 1;
+
+
+const liType1 = document.querySelector("ul li[4]");
+liType1.style.backgroundColor = 'lightsalmon';
+liType1.style.width = 100;
+liType1.style.height = 50;
+liType1.style.borderBlockColor = 'black';
+liType1.style.borderBlockStyle = 'solid';
+liType1.style.borderBlockWidth = 1;
+*/
 
 
 /*
@@ -304,9 +342,22 @@ liType2.style.height = 50;
 
 
 
+
+/*
+
+1)리스트마다 배경색깔같은 속성을 각각 부여할 수 있는점이 할수 있을것같은데 배경색이나 다른 스타일들이 잘 안뜬다. 원인은 무엇일까?
+
+2) 반복문 작성시 리스트박스를 생성하고 그 안에 텍스트박스를 생성하는 노드를 똑같이 반복문을 적용하여 이어붙이고 싶은데 코드를 작성하다 꼬여서 그런가 적용이 되지않는다. createNode와 attributeNode를 사용하면 잘 될까?
+
+3)css에서 적용하는 vw,vh,px,% 등등 많은 단위가 존재하는데 이를 자바스크립트에서는 어떤식으로 적용해야하며, 또는 이런 단위들이 자바스크립트에서는 존재하는가? 
+
+*/
+
+
+
+
+
 </script>
-
-
 
 </body>
 </html>
