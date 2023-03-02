@@ -69,8 +69,6 @@ border: 1px solid blue;
 </head>
 
 
-
-
 <body>
 <aside id="move-btn">
 <h1>move!</h1>
@@ -96,35 +94,120 @@ border: 1px solid blue;
 </main>
 </div>
 
-<script>
-// 
-const root = document.getElementById("root");
-console.dir(root);
 
+
+<script>
+//#move-btn부분
+const mButton = document.getElementById("move-btn");
+mButton.style.backgroundColor = 'lightgray';
+mButton.style.width = 200;
+mButton.style.height = 200;
+mButton.style.borderBlockColor = 'black';
+mButton.style.borderBlockStyle = 'dotted';
+mButton.style.borderBlockWidth = 3;
+mButton.style.borderRadius = 50;
+mButton.style.position = 'fixed';
+mButton.style.display = 'flex';
+//h1부분
+const btnTitle = document.querySelector("h1");
+btnTitle.style.color = 'purple';
+const ntext = document.createAttribute("id");
+//btnTitle.value = "try to move this!!!";
+btnTitle.value = "new h1 title";
+btnTitle.setAttributeNode(ntext);
+
+//div#root부분
+const rootContainer = document.getElementById("root");
+rootContainer.style.backgroundColor = 'aqua';
+rootContainer.style.width = 100;
+rootContainer.style.height = 100;
+rootContainer.style.display = 'flex';
+
+//main부분
+const mainContainer = document.querySelector("main");
+//console.dir(mainContainer);
+mainContainer.style.backgroundcolor = 'blue';
+mainContainer.style.width = 500;
+mainContainer.style.height = 500;
+mainContainer.style.borderBlockColor = 'black';
+mainContainer.style.borderBlockStyle = 'dotted';
+mainContainer.style.borderBlockWidth = 1;
 
 // 섹션왼쪽부분
-const section1 = document.getElementById("left-sect");
-console.dir(section1);
-const liType = document.querySelectorAll(li);
-liType = document.createAttribute("id");
-liType.value = "list_line";
-const newP = document.createElement('p');
-const newText = document.createTextNode("first one");
-newP.appendChild(newText);
+const sectLeft = document.getElementById("left-sect");
+sectLeft.style.backgroundColor = 'violet';
+sectLeft.style.width = 200;
+sectLeft.style.height = 450;
+sectLeft.style.borderBlockColor = 'black';
+sectLeft.style.borderBlockStyle = 'solid';
+sectLeft.style.borderBlockWidth = 1;
 
-/*
-const listLeft = document.element.setAttribute('listLeft','items');
-const listRight = document.element.setAttribute('listRight','items');
-*/
+//리스트 만들기(왼쪽세션기준)
+const ul_1 = document.createElement("ul");
+const li_1 = document.createElement("li");
+const liText1 = document.createTextNode("items-$");
+li_1.appendChild(liText1);
+ul_1.appendChild(li_1);
+
+const li_2 = document.createElement("li");
+const liText2 = document.createTextNode("items-$");
+li_2.appendChild(liText2);
+ul_1.appendChild(li_2);
+
+const li_3 = document.createElement("li");
+const liText3 = document.createTextNode("items-$");
+li_3.appendChild(liText3);
+ul_1.appendChild(li_3);
+
+const li_4 = document.createElement("li");
+const liText4 = document.createTextNode("items-$");
+li_4.appendChild(liText4);
+ul_1.appendChild(li_4);
+
+const li_5 = document.createElement("li");
+const liText5 = document.createTextNode("items-$");
+li_5.appendChild(liText5);
+ul_1.appendChild(li_5);
 
 
-/*
+//왼쪽부분 리스트
+const liType1 = document.querySelector("ul li");
+liType1.style.backgroundColor = 'lightsalmon';
+liType1.style.width = 100;
+liType1.style.height = 50;
+liType1.style.borderBlockColor = 'black';
+liType1.style.borderBlockStyle = 'solid';
+liType1.style.borderBlockWidth = 1;
+
 // 섹션오른쪽부분
-const section2 = document.getElementById("right-sect");
-console.dir(section2);
-const ulType = createElement('li');
-ulType = setAttribute('id', 'rightList');
+const sectRight = document.getElementById("right-sect");
+sectRight.style.backgroundColor = 'skyblue';
+sectRight.style.width = 200;
+sectRight.style.height = 450;
+sectRight.style.borderBlockColor = 'blue';
+sectRight.style.borderBlockStyle = 'solid';
+sectRight.style.borderBlockWidth = 1;
+
+const ul_2 = document.createElement("ul");
+sectRight.appendChild(ul_2);
+
+
+//오른쪽부분 리스트
+/*
+const liType2 = document.querySelector("ul")[1];
+const nList = document.createAttribute("id");
+nList.value = "list2";
+//nList.setAttributeNode(nList);
 */
+
+/*
+const liType2 = document.querySelectorAll("ul")[1];
+liType2.style.backgroundColor = 'grassgreen';
+liType2.style.width = 100;
+liType2.style.height = 50;
+*/
+//console.dir(liType2);
+
 
 
 </script>
