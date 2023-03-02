@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+/* reset */
+* {margin:0px; padding:0px; box-sizing: border-box;}
+body {overflow-x: hidden;}
+ul {list-style-type: none;}
+#move-btn {
+width: 200px;
+height: 200px;
+background-color: #fff;
+border-radius : 50%;
+position: fixed;
+bottom: 10px;
+left: 50vw;
+transform: translate(-50%, 0);
+/* flex set */
+display:flex;
+justify-content: center;
+align-items: center;
+}
+#root {
+width:100vw;
+height:100vh;
+background-color:cadetblue;
+/* flex set */
+display:flex;
+justify-content: center;
+align-items: center;
+}
+#root > main {
+width: 500px;
+height: 500px;
+border: 1px dotted black;
+/* flex set */
+display:flex;
+justify-content: center;
+align-items: center;
+}
+#root > main > section {
+/* flex set */
+display:flex;
+justify-content: center;
+align-items: center;
+}
+#root > main > section ul li {
+width: 100%;
+height: 50px;
+background-color: #fff;
+border: 1px solid black;
+}
+#root > main > section:first-child {
+width:200px;
+height:450px;
+border: 1px solid black;
+}
+#root > main > section:last-child {
+width:200px;
+height:450px;
+border: 1px solid blue;
+}
+
+</style>
+</head>
+
+
+
+
+<body>
+<aside id="move-btn">
+<h1>move!</h1>
+</aside>
+
+<div id="root">
+<main>
+
+<section id="left-sect">
+<ul>
+<li>items-1</li>
+<li>items-2</li>
+<li>items-3</li>
+<li>items-4</li>
+<li>items-5</li>
+</ul>
+</section>
+
+<section id="right-sect">
+<ul></ul>
+</section>
+
+</main>
+</div>
+
+<script>
+// 
+const root = document.getElementById("root");
+console.dir(root);
+
+
+// 섹션왼쪽부분
+const section1 = document.getElementById("left-sect");
+console.dir(section1);
+const liType = document.querySelectorAll(li);
+liType = document.createAttribute("id");
+liType.value = "list_line";
+const newP = document.createElement('p');
+const newText = document.createTextNode("first one");
+newP.appendChild(newText);
+
+/*
+const listLeft = document.element.setAttribute('listLeft','items');
+const listRight = document.element.setAttribute('listRight','items');
+*/
+
+
+/*
+// 섹션오른쪽부분
+const section2 = document.getElementById("right-sect");
+console.dir(section2);
+const ulType = createElement('li');
+ulType = setAttribute('id', 'rightList');
+*/
+
+
+</script>
+
+
+
+</body>
+</html>

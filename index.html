@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<body>
+  <div id="root">
+    <u1 id="menu">
+      <li>items-1</li>
+      <li>items-2</li>
+      <li>items-3</li>
+      <li>items-4</li>
+      <li>items-5</li>
+    </u1>
+  </div>
+
+<script>
+
+  
+  const menu = document.getElementById("menu");
+  const firstLi = document.querySelector("menu > li:nth-child(1)");
+  console.log(firstLi);
+  console.dir(menu.children);
+
+  let ddokttak = true;
+  menu.addEventListener('click',function(){
+    if(ddokttak === true){
+      for(let i = 0; i < menu.children.length; i++){
+        menu.children[i].style.color = 'violet';
+        menu.style.backgroundColor = 'purple';
+      }
+      ddokttak = false;
+    }else{
+      for(let i = 0; i < menu.children.length; i++){
+        menu.children[i].style.color = 'cornfolwerblue';
+        menu.style.backgroundColor = 'blue';
+      }
+      ddokttak = true;
+      //menu.children[i].addEventListener('click',function(){
+    }
+  });
+
+
+/*
+const menu = document.querySelector("#menu");
+const li = document.querySelectorAll("#menu li");
+console.dir(menu);
+console.dir(li);
+
+menu.children[0].style.color = 'hotpink';
+menu.children[1].style.color = 'cornflowerblue';
+*/
+
+    /*
+    if(i==0){
+
+    }else if(i==1){
+
+    }else if(i==2){
+
+    }else if(i==3){
+
+    }else if(i==4){
+
+    }
+    */
+
+
+  /*
+  menu.children[0].addEventListener('click',function(){
+    menu.children[0].style.color = 'pink';
+  });
+  menu.children[1].addEventListener('click',function(){
+    menu.children[1].style.color = 'skyblue';
+  });
+  menu.children[2].addEventListener('click',function(){
+    menu.children[2].style.color = 'lightgreen';
+  });
+  menu.children[3].addEventListener('click',function(){
+    menu.children[3].style.color = 'lightsalmon';
+  });
+  menu.children[4].addEventListener('click',function(){
+    menu.children[4].style.color = 'violet';
+  });
+  */
+
+
+  /*
+  for(let i = 0; i < menu.children.length; i++){
+    switch(i){
+      case 0 :
+      menu.children[0].style.color = 'pink';
+      break;
+      case 1 :
+      menu.children[1].style.color = 'skyblue';
+      break;
+      case 2 : 
+      menu.children[2].style.color = 'lightgreen';
+      break;
+      case 3 : 
+      menu.children[3].style.color = 'lightsalmon';
+      break;
+      case 4 :
+      menu.children[4].style.color = 'violet';   
+      break;   
+    }
+    //menu.children[i].style.color = ;
+  }
+  */
+  
+  /*
+  for(let i = 0; i <menu.children.length; i++){}
+  for(let i = menu.children.length; i > 0; i--){}
+  */
+</script>
+
+</body>
+</html>
