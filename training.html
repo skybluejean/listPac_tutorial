@@ -54,11 +54,13 @@ height: 50px;
 background-color: #fff;
 border: 1px solid black;
 }
+/*left section*/
 #root > main > section:first-child {
 width:200px;
 height:450px;
 border: 1px solid black;
 }
+/*right section*/
 #root > main > section:last-child {
 width:200px;
 height:450px;
@@ -67,8 +69,6 @@ border: 1px solid blue;
 
 </style>
 </head>
-
-
 
 
 <body>
@@ -96,35 +96,212 @@ border: 1px solid blue;
 </main>
 </div>
 
-<script>
-// 
-const root = document.getElementById("root");
-console.dir(root);
 
+
+<script>
+
+
+
+function createBorder(color, style, width){
+    color = setColor.style.borderBlockColor;
+    style = setStyle.style.borderBlockStyle;
+    width = setWidth.style.borderBlockWidth;
+  }
+
+//#move-btn부분
+const mButton = document.getElementById("move-btn");
+mButton.style.backgroundColor = 'lightgray';
+mButton.style.width = 200;  //200px
+mButton.style.height = 200; //200px
+mButton.style.borderBlockColor = 'black';
+mButton.style.borderBlockStyle = 'dotted';
+mButton.style.borderBlockWidth = 3; //3px
+mButton.style.borderRadius = 50; // 50%
+mButton.style.position = 'fixed';
+mButton.style.transform = 'translate'; //(-50%,0)
+mButton.style.display = 'flex';
+
+/*
+//aside를 객체로 바꿔보기
+const nButtom = {
+  bgColor : "lightgray",
+  width : 200,
+  height : 200,
+  border : function createBorder(){},
+  radius : 50,
+  position : "fixed",
+  display : "flex"
+}
+*/
+
+//h1부분
+const btnTitle = document.querySelector("h1");
+btnTitle.style.color = 'purple';
+const ntext = document.createAttribute("id");
+//btnTitle.value = "try to move this!!!";
+btnTitle.value = "new h1 title";
+btnTitle.setAttributeNode(ntext);
+
+//div#root부분
+const rootContainer = document.getElementById("root");
+rootContainer.style.backgroundColor = 'aqua';
+rootContainer.style.width = 100;
+rootContainer.style.height = 100;
+rootContainer.style.display = 'flex';
+
+
+/*
+//root를 객체로 바꿔보기
+const rootContainer = {
+  bgColor : "aqua",
+  width : 100,
+  height :  100,
+  display : "flex"
+}
+*/
+
+//main부분
+const mainContainer = document.querySelector("main");
+//console.dir(mainContainer);
+mainContainer.style.backgroundcolor = 'blue';
+mainContainer.style.width = 500;
+mainContainer.style.height = 500;
+mainContainer.style.borderBlockColor = 'black';
+mainContainer.style.borderBlockStyle = 'dotted';
+mainContainer.style.borderBlockWidth = 1;
+
+/*
+//main을 객체로 바꿔보기
+const mainContainer = {
+  bColor : "blue",
+  width : 500,
+  height : 500,
+  border : function createBorder("black", "dotted", 1){
+
+  }
+}
+*/
 
 // 섹션왼쪽부분
-const section1 = document.getElementById("left-sect");
-console.dir(section1);
-const liType = document.querySelectorAll(li);
-liType = document.createAttribute("id");
-liType.value = "list_line";
-const newP = document.createElement('p');
-const newText = document.createTextNode("first one");
-newP.appendChild(newText);
+const sectLeft = document.getElementById("left-sect");
+sectLeft.style.backgroundColor = 'violet';
+sectLeft.style.width = 200;
+sectLeft.style.height = 450;
+sectLeft.style.borderBlockColor = 'black';
+sectLeft.style.borderBlockStyle = 'solid';
+sectLeft.style.borderBlockWidth = 1;
 
 /*
-const listLeft = document.element.setAttribute('listLeft','items');
-const listRight = document.element.setAttribute('listRight','items');
+//section을 객체로 바꿔보기
+const sectLeft = {
+  bgColor : "violet",
+  width : 200,
+  height : 450,
+  border : function createBorder("black", "solid", 1){}
+}
 */
 
 
+//리스트 만들기(왼쪽세션기준)
+const ul_1 = document.createElement("ul");
+
+const li_1 = document.createElement("li");
+const liText1 = document.createTextNode("items-1");
+li_1.appendChild(liText1);
+ul_1.appendChild(li_1);
+
+const li_2 = document.createElement("li");
+const liText2 = document.createTextNode("items-2");
+li_2.appendChild(liText2);
+ul_1.appendChild(li_2);
+
+const li_3 = document.createElement("li");
+const liText3 = document.createTextNode("items-3");
+li_3.appendChild(liText3);
+ul_1.appendChild(li_3);
+
+const li_4 = document.createElement("li");
+const liText4 = document.createTextNode("items-4");
+li_4.appendChild(liText4);
+ul_1.appendChild(li_4);
+
+const li_5 = document.createElement("li");
+const liText5 = document.createTextNode("items-5");
+li_5.appendChild(liText5);
+ul_1.appendChild(li_5);
+
+console.log(ul_1);
+console.dir(ul_1);
+
+
+function addList(){
+  ///listText를 list에 붙이기
+  element.appendChild();
+  ///list를 ul에 붙이기
+  element.appendChild();
+}
+  
+  function createList( ){
+    for(let i = 0; i < ul_1.length; i++){
+      document.createElement("li")[i];
+      for(let t = 0; t < 5; t++){
+        document.createTextNode("items-t");
+      }
+    }
+  }
+  
+//왼쪽부분 리스트
+const liType1 = document.querySelector("ul li");
+liType1.style.backgroundColor = 'lightsalmon';
+liType1.style.width = 100;
+liType1.style.height = 50;
+liType1.style.borderBlockColor = 'black';
+liType1.style.borderBlockStyle = 'solid';
+liType1.style.borderBlockWidth = 1;
+
+
 /*
+//list를 객체로 바꿔보기
+const liType1 = {
+  bgColor : "lightsalmon",
+  width : 100,
+  height : 50,
+  border : function createBorder("lightsalmon", "solid", 1){
+
+  }
+}
+*/
+
+
 // 섹션오른쪽부분
-const section2 = document.getElementById("right-sect");
-console.dir(section2);
-const ulType = createElement('li');
-ulType = setAttribute('id', 'rightList');
+const sectRight = document.getElementById("right-sect");
+sectRight.style.backgroundColor = 'skyblue';
+sectRight.style.width = 200;
+sectRight.style.height = 450;
+sectRight.style.borderBlockColor = 'bisque';
+sectRight.style.borderBlockStyle = 'dotted';
+sectRight.style.borderBlockWidth = 5; //5px
+
+const ul_2 = document.createElement("ul");
+sectRight.appendChild(ul_2);
+
+
+//오른쪽부분 리스트
+/*
+const liType2 = document.querySelector("ul")[1];
+const nList = document.createAttribute("id");
+nList.value = "list2";
+//nList.setAttributeNode(nList);
 */
+
+/*
+const liType2 = document.querySelectorAll("ul")[1];
+liType2.style.backgroundColor = 'grassgreen';
+liType2.style.width = 100;
+liType2.style.height = 50;
+*/
+//console.dir(liType2);
+
 
 
 </script>
